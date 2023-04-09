@@ -12,5 +12,6 @@ function getPlayerChoice() {
         return 2;
     } else {
         alert('Error. You must select a valid option.')
+        return getPlayerChoice()
     }
 }
