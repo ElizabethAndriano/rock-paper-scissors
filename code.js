@@ -24,7 +24,7 @@ function round() {
     console.log('Player: ' + playerSelection)
 
     if (playerSelection === computerSelection) {
-        return "It's a tie!"
+        return "Tie"
     } else if (playerSelection === 0) {
         return computerSelection === 1 ? False : True // 'You lose! Paper beats rock' : 'You win! Rock beats scissors'
     } else if (playerSelection === 1) {
@@ -42,7 +42,10 @@ function game() {
         let result = round()
         
         console.log(result)
-        result ? playerScore++ : computerScore++
+
+        if (result !== 'Tie') {
+            result ? playerScore++ : computerScore++
+        }
 
         console.log('Computer Score: ' + computerScore)
         console.log('Player Score: ' + playerScore)
