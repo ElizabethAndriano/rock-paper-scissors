@@ -26,11 +26,11 @@ function round() {
     if (playerSelection === computerSelection) {
         return "Tie"
     } else if (playerSelection === 0) {
-        return computerSelection === 1 ? False : True // 'You lose! Paper beats rock' : 'You win! Rock beats scissors'
+        return computerSelection === 1 ? false : true // 'You lose! Paper beats rock' : 'You win! Rock beats scissors'
     } else if (playerSelection === 1) {
-        return computerSelection === 2 ? False : True // 'You lose! Scissors beat paper' : 'You win! Paper beats rock'
+        return computerSelection === 2 ? false : true // 'You lose! Scissors beat paper' : 'You win! Paper beats rock'
     } else if (playerSelection === 2) {
-        return computerSelection === 0 ? False : True // 'You lose! Rock beats Scissors' : 'You win! Scissors beat paper'
+        return computerSelection === 0 ? false : true // 'You lose! Rock beats Scissors' : 'You win! Scissors beat paper'
     }
 }
 
