@@ -2,7 +2,7 @@ function getComputerChoice() {
     return Math.floor(Math.random() * 3);
 }
 
-function getPlaterChoice() {
+function getPlayerChoice() {
     let answer = prompt('Whats your choice (Rock/Paper/Scissors)?')
     if (answer.toLowerCase() === 'rock') {
         return 0;
@@ -12,6 +12,5 @@ function getPlaterChoice() {
         return 2;
     } else {
         alert('Error. You must select a valid option.')
-        return getPlaterChoice();
     }
 }
