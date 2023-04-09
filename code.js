@@ -3,7 +3,7 @@ function getComputerChoice() {
 }
 
 function getPlayerChoice() {
-    let answer = prompt('Whats your choice (Rock/Paper/Scissors)?')
+    const answer = prompt('Whats your choice (Rock/Paper/Scissors)?')
     if (answer.toLowerCase() === 'rock') {
         return 0
     } else if (answer.toLowerCase() === 'paper') {
@@ -17,8 +17,8 @@ function getPlayerChoice() {
 }
 
 function round() {
-    playerSelection = getPlayerChoice()
-    computerSelection = getComputerChoice()
+    const playerSelection = getPlayerChoice()
+    const computerSelection = getComputerChoice()
 
     console.log('Computer: ' + computerSelection)
     console.log('Player: ' + playerSelection)
@@ -33,4 +33,4 @@ function round() {
         return computerSelection === 0 ? 'You lose! Rock beats Scissors' : 'You win! Scissors beat paper'
     }
 }
-console.log(round())
+
