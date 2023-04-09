@@ -38,7 +38,7 @@ function game() {
     let computerScore = 0
     let playerScore = 0
 
-    for (i = 0; playerScore + computerScore < 5; i++) {
+    for (i = 0; playerScore < 3 && computerScore < 3; i++) {
         let result = round()
         
         console.log(result)
