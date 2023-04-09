@@ -34,3 +34,10 @@ function round() {
     }
 }
 
+function game() {
+    for (i = 0; i < 5; i++) {
+        console.log(round())
+    }
+}
+
+game()
