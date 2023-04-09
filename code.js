@@ -58,7 +58,7 @@ function game() {
     let playerScore = 0
 
     for (i = 1; playerScore < 3 && computerScore < 3; i++) {
-        
+        console.log('Round ' + i + ' -------------')
 
         let result = round()
 
