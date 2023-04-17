@@ -2,7 +2,7 @@ function getComputerChoice() {
     return Math.floor(Math.random() * 3)
 }
 
-function getPlayerChoice() {
+/*function getPlayerChoice() {
     const answer = prompt('Whats your choice (Rock/Paper/Scissors)?')
     if (answer.toLowerCase() === 'rock') {
         return 0
@@ -14,10 +14,10 @@ function getPlayerChoice() {
         alert('Error. You must select a valid option.')
         return getPlayerChoice()
     }
-}
+}*/
 
-function round() {
-    const playerSelection = getPlayerChoice()
+function round(playerSelection) {
+    //const playerSelection = getPlayerChoice()
     const computerSelection = getComputerChoice()
 
     console.log('Computer: ' + computerSelection)
@@ -73,4 +73,19 @@ function game() {
     console.log(playerScore > computerScore ? 'You win!' : 'You lose!')
 }
 
-game()
+const keys = document.querySelectorAll(".option")
+
+keys.forEach( (key) => {
+    key.addEventListener('click', (e) =>{
+        if (key.id === 'rock') {
+            round(0);
+        } else if (key.id === 'paper'){
+            round(1)
+        } else if (key.id === 'scissors'){
+            round(2)
+        } else return;
+    })
+})
+
+
+//game()
