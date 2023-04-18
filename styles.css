@@ -3,7 +3,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: #fcfdaf;
+    background: #CCCCCC;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,10 +13,11 @@ body {
 }
 
 .header {
-    background-color: #efd780;
+    background-color: #14213d;
     width: 100%;
     text-align: center;
     font-size: 40px;
+    color: #fca311;
 }
 
 .options, .scores {
@@ -29,13 +30,13 @@ body {
 .option {
     display: flex;
     padding: 25px;
-    background-color: #d0e3cc;
+    background-color: #EBEBEB;
     border-radius: 20px;
     border: 0;
 }
 
 .option:hover {
-    background-color: #E4F1D5;
+    background-color: #fca311;
 }
 
 .option img{
