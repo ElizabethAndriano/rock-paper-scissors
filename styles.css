@@ -39,6 +39,10 @@ body {
     background-color: #fca311;
 }
 
+.option:disabled:hover{
+    background-color: #EBEBEB;
+}
+
 .option img{
     height: 150px;
 }
