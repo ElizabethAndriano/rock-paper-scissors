@@ -26,6 +26,10 @@ body {
     align-items: center;
 }
 
+.result > p{
+    margin: 0px;
+}
+
 .result > button {
     font: 20px 'Tilt Neon';
     padding: 15px 25px;
