@@ -17,75 +17,67 @@ function getComputerChoice() {
 }*/
 
 function round(playerSelection) {
-    //const playerSelection = getPlayerChoice()
     const computerSelection = getComputerChoice()
+    
+    let result;
+
+    const displayResult = document.querySelector("p.result");
+    const pScore = document.querySelector(".player");
+    const cScore = document.querySelector(".computer")
 
     console.log('Computer: ' + computerSelection)
     console.log('Player: ' + playerSelection)
 
     if (playerSelection === computerSelection) {
-        console.log('It\'s a tie!')
-        return 'Tie'
+        displayResult.textContent = 'It\'s a tie!'
+        result = 'Tie'
     } else if (playerSelection === 0) {
         if (computerSelection === 1) {
-            console.log('Paper beats rock')
-            return false
+            displayResult.textContent = 'Paper beats rock'
+            result = false
         } else {
-            console.log('Rock beats scissors')
-            return true
+            displayResult.textContent ='Rock beats scissors'
+            result = true
         }
     } else if (playerSelection === 1) {
         if (computerSelection === 2) {
-            console.log('Scissors beat paper')
-            return false
+            displayResult.textContent = 'Scissors beat paper'
+            result = false
         } else {
-            console.log('Paper beats rock')
-            return true
+            displayResult.textContent = 'Paper beats rock'
+            result = true
         }
     } else if (playerSelection === 2) {
         if (computerSelection === 0) {
-            console.log('Rock beats scissors')
-            return false
+            displayResult.textContent = 'Rock beats scissors'
+            result = false
         } else {
-            console.log('Scissors beat paper')
-            return true
+            displayResult.textContent = 'Scissors beat paper'
+            result = true
         }
     }
-}
 
-function game() {
-    let computerScore = 0
-    let playerScore = 0
-
-    for (i = 1; playerScore < 3 && computerScore < 3; i++) {
-        console.log('Round ' + i + ' -------------')
-
-        let result = round()
-
-        if (result !== 'Tie') {
-            result ? playerScore++ : computerScore++
-        }
-
-        console.log('Computer Score: ' + computerScore)
-        console.log('Player Score: ' + playerScore)
+    if (result !== 'Tie'){
+        result ? playerScore++ : computerScore ++;
     }
 
-    console.log(playerScore > computerScore ? 'You win!' : 'You lose!')
+    pScore.textContent = playerScore
+    cScore.textContent = computerScore
 }
 
-const keys = document.querySelectorAll(".option")
+let computerScore = 0
+let playerScore = 0
+
+const keys = document.querySelectorAll(".option");  
 
 keys.forEach( (key) => {
     key.addEventListener('click', (e) =>{
         if (key.id === 'rock') {
-            round(0);
+            result = round(0);
         } else if (key.id === 'paper'){
-            round(1)
+            result = round(1)
         } else if (key.id === 'scissors'){
-            round(2)
+            result = round(2)
         } else return;
     })
 })
-
-
-//game()
