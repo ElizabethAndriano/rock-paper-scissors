@@ -7,7 +7,7 @@ function round(playerSelection) {
     
     let result;
 
-    const displayResult = document.querySelector("p.result");
+    const displayResult = document.querySelector(".result > p");
     const pScore = document.querySelector(".player");
     const cScore = document.querySelector(".computer")
 
@@ -50,15 +50,24 @@ function round(playerSelection) {
     pScore.textContent = playerScore
     cScore.textContent = computerScore
 
-    if (playerScore === 5) {
-        document.querySelector('h2.result').textContent = 'You Win!!!'
+    if (playerScore === 5 || computerScore === 5) {
+        playerScore > computerScore ? document.querySelector('h2').textContent = 'You Win!!!'
+                                    : document.querySelector('h2').textContent = 'You Lose'
+
         buttons.forEach((button) => {
             button.disabled = true    
         })
-    } else if (computerScore === 5) {
-        document.querySelector('h2.result').textContent = 'You Lose'
-        buttons.forEach((button) => {
-            button.disabled = true    
+
+        restart = document.createElement('button')
+
+        restart.classList.add('option')
+        restart.textContent = 'Restart'
+
+        displayResult.parentElement.appendChild(restart)
+        displayResult.parentElement.removeChild(displayResult)
+
+        restart.addEventListener('click', (e) =>{
+            location.reload()
         })
     }
 }

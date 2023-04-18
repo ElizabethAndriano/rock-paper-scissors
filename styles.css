@@ -20,6 +20,17 @@ body {
     color: #fca311;
 }
 
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result > button {
+    font: 20px 'Tilt Neon';
+    padding: 15px 25px;
+}
+
 .options, .scores {
     display: flex;
     justify-content: center;
