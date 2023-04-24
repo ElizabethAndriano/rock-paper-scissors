@@ -10,6 +10,7 @@ body {
     font-family: 'Tilt Neon', serif;
     text-align: center;
     font-size: 20px;
+    justify-content: space-between;
 }
 
 .header {
@@ -60,4 +61,16 @@ body {
 
 .option img{
     height: 150px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 12px;
+}
+
+.footer > a {
+    text-decoration: none;
+    color: #14213d;
 }
